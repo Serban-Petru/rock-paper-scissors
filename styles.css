@@ -1,0 +1,115 @@
+*{
+    font-family: "Galindo", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+    flex-grow: 0;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.title{
+    background-color: green;
+    border: solid green;
+    border-radius: 20px;
+}
+
+.middleSection{
+    display: flex;
+    background-color: rgb(23, 23, 75);
+    padding: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.humanSection,.computerSection{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button{
+    border-style: none;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    
+}
+
+.vsText{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.humanSection,
+.computerSection,
+.vsText{
+    display: flex;
+    gap:20px;
+}
+
+.left,.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoSection{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+
+.scor{
+    color: black;
+    background-color: white;
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center; align-items: center;
+    font-style: italic;
+    font-size: 100px;
+    border-radius: 20px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: large;
+    
+}
+
+.winnerSection{
+    color: black;
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center; align-items: center;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 20px;
+
+}
