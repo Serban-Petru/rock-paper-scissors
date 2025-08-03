@@ -61,6 +61,7 @@ function dropBoxWinner(string, color){
     winner.scrollIntoView();
 
 }
+ 
 
 buttons.forEach((button) =>{
     button.addEventListener("click",()=>{
