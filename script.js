@@ -35,17 +35,32 @@ function playRound(humanChoice, computerChoice){
 }
 
 function winner(content){
-        if(humanScore === computerScore)
-            content.textContent = "Egalitate";
-        else if(humanScore > computerScore)
-            content.textContent =`Human wins with ${humanScore} points.`;
-        else
-            content.textContent =`Computer wins with ${computerScore} points.`;
+        if(humanScore === computerScore){ 
+            // content.textContent = "Egalitate";
+            dropBoxWinner("Egalitate");
+        }
+        else if(humanScore > computerScore){ 
+            let humanWin=`Human wins with ${humanScore} points.`;
+            dropBoxWinner(humanWin,"lightgreen");
+        }
+        else{
+            let computerWin =`Computer wins with ${computerScore} points.`;
+            dropBoxWinner(computerWin,"red");
+        }
 }
 
 const buttons = document.querySelectorAll("button");
 const body = document.querySelector("body");
 
+function dropBoxWinner(string, color){
+    const winnerRecord = document.querySelector("ul");
+    const winner = document.createElement("li");
+    winnerRecord.appendChild(winner);
+    winner.textContent = string;
+    winner.style.backgroundColor =color; 
+    winner.scrollIntoView();
+
+}
 
 buttons.forEach((button) =>{
     button.addEventListener("click",()=>{
@@ -54,7 +69,8 @@ buttons.forEach((button) =>{
         const textWinner = document.querySelector("#winner");
         scor.textContent = `${humanScore} \\ ${computerScore}`;
         rounds++;
-        textWinner.textContent="";
+        // textWinner.textContent="";
+
         if( rounds === 5){
             winner(textWinner);
             rounds = 0; humanScore = 0; computerScore = 0;

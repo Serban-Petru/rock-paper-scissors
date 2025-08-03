@@ -34,6 +34,7 @@ body{
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    flex: 1;
 }
 
 .humanSection,.computerSection{
@@ -113,3 +114,26 @@ button{
     border-radius: 20px;
 
 }
+
+.winnerSection{
+    overflow:scroll;
+    overflow:auto;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none;
+    
+}
+
+
+
+
+
+
